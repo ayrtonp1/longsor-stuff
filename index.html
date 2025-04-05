@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Informasi mengenai kawasan rawan longsor di Kota Manado, termasuk faktor penyebab dan dampaknya.">
+  <title>Kerentanan Longsor di Kota Manado</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Kerentanan Longsor di Kota Manado</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#map-container">Peta</a></li>
+      <li><a href="#about">Detail Lokasi</a></li>
+    </ul>
+  </nav>
+
+  <section id="map-container">
+    <div id="map"></div>
+  </section>
+
+  <section id="data">
+    <p>Kota Manado memiliki beberapa kawasan yang rentan terhadap bencana tanah longsor...</p>
+    <table>
+      <tr>
+        <th>Kawasan Rawan Longsor</th>
+        <th>Lokasi</th>
+        <th>Titik Koordinat</th>
+      </tr>
+      <tr onclick="showDetail(1.45386852,124.837393, 'Wanea')">
+        <td>Kawasan 1</td>
+        <td>Wanea</td>
+        <td><a href="https://www.google.com/maps?q=&layer=c&cbll=1.45386852,124.837393" target="_blank">1.45386852,124.837393</a></td>
+      </tr>
+      <tr onclick="showDetail(1.47064, 124.88218, 'Malendeng')">
+        <td>Kawasan 2</td>
+        <td>Malendeng</td>
+        <td><a href="https://www.google.com/maps?q=&layer=c&cbll=1.47064,124.88218" target="_blank">1.47064, 124.88218</a></td>
+      </tr>
+      <tr onclick="showDetail(1.56682197,124.8580559, 'Pandu')">
+        <td>Kawasan 3</td>
+        <td>Pandu</td>
+        <td><a href="https://www.google.com/maps?q=&layer=c&cbll=1.56682197,124.8580559" target="_blank">1.56682197,124.8580559</a></td>
+      </tr>
+      <tr onclick="showDetail(1.54305187,124.85139, 'Bailang')">
+        <td>Kawasan 4</td>
+        <td>Bailang</td>
+        <td><a href="https://www.google.com/maps?q=&layer=c&cbll=1.54305187,124.85139" target="_blank">1.54305187,124.85139</a></td>
+      </tr>
+      <tr onclick="showDetail(1.482500, 124.888056, 'Kairagi Weru')">
+        <td>Kawasan 5</td>
+        <td>Kairagi Weru</td>
+        <td><a href="https://www.google.com/maps?q=&layer=c&cbll=1.482500,124.888056" target="_blank">1.482500, 124.888056</a></td>
+      </tr>
+      <tr onclick="showDetail(1.457759, 124.843165, 'Pakowa')">
+        <td>Kawasan 6</td>
+        <td>Pakowa</td>
+        <td><a href="https://www.google.com/maps?q=&layer=c&cbll=1.457759,124.843165" target="_blank">1.457759, 124.843165</a></td>
+      </tr>
+      <tr onclick="showDetail(1.48392726,124.86949529, 'Ranomuut')">
+        <td>Kawasan 7</td>
+        <td>Ranomuut</td>
+        <td><a href="https://www.google.com/maps?q=&layer=c&cbll=1.48392726,124.86949529" target="_blank">1.48392726,124.86949529</a></td>
+      </tr>
+      <tr onclick="showDetail(1.54658872,124.89896521, 'Kima Atas')">
+        <td>Kawasan 8</td>
+        <td>Kima Atas</td>
+        <td><a href="https://www.google.com/maps?q=&layer=c&cbll=1.54658872,124.89896521" target="_blank">1.54658872,124.89896521</a></td>
+      </tr>
+      <tr onclick="showDetail(1.44693871, 124.78807757, 'Malalayang Dua')">
+        <td>Kawasan 9</td>
+        <td>Malalayang Dua</td>
+        <td><a href="https://www.google.com/maps?q=&layer=c&cbll=1.44693871,124.78807757" target="_blank">1.44693871, 124.78807757</a></td>
+      </tr>
+      <tr onclick="showDetail(1.5191851,124.8588478, 'Sumompo')">
+        <td>Kawasan 10</td>
+        <td>Sumompo</td>
+        <td><a href="https://www.google.com/maps?q=&layer=c&cbll=1.5191851,124.8588478" target="_blank">1.5191851,124.8588478</a></td>
+      </tr>
+    </table>    
+  </section>
+
+  <section id="about">
+    <h2>Detail Lokasi</h2>
+    <div id="detail-container">
+      <img id="location-image" src="Wanea.png" alt="Lokasi Longsor">
+      <div id="info">
+        <h3 id="location-name">Wanea</h3>
+        <p><strong>Faktor Pemicu:</strong> <span id="faktor">Penggunaan lahan tidak teratur, kemiringan lereng curam</span></p>
+        <p><strong>Dampak:</strong> <span id="dampak">Kerusakan bangunan, lahan pertanian</span></p>
+        <p><strong>Jenis Tanah:</strong> <span id="jenis-tanah">Alluvial dan Latosol</span></p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Kawasan Rawan Longsor Manado</p>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
